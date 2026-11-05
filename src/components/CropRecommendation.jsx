@@ -52,7 +52,7 @@ const CropRecommendation = () => {
     }
 
     axios
-      .post("http://localhost:5001/predict", formData)
+      .post("https://smart-crop-node-backend.onrender.com/api/crop-recommend", formData)
       .then((response) => {
         const result = response.data.message;
         navigate("/crop-result", { state: { predictedCrop: result } });
