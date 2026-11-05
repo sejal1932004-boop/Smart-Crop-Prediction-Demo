@@ -1,4 +1,5 @@
-import React, { useState } from "react"; 
+import React, { useState, useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,6 +11,7 @@ const Login = () => {
   const [error, setError] = useState("");
 
   const navigate = useNavigate();
+  const { login } = useContext(AuthContext);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -21,7 +23,7 @@ const Login = () => {
         password,
       });
 
-      localStorage.setItem("token", res.data.token);
+      login(res.data.token);
       alert("Login successful!");
       navigate("/home"); // ✅ Redirect after successful login
     } catch (err) {
