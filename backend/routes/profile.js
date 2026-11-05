@@ -1,5 +1,5 @@
 const express = require('express');
-const authenticate = require('../middleware/authMiddleware'); // Import middleware
+const authenticate = require('../Middleware/authMiddleware'); // Import middleware
 const router = express.Router();
 
 // Protected route example: /profile
