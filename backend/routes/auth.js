@@ -16,7 +16,7 @@ router.post('/crop-recommend', async (req, res) => {
 
   try {
     // Flask API ko POST request bhej rahe hain
-    const response = await axios.post('http://smart-crop-prediction-demo.orender.com/predict', formData);
+    const response = await axios.post('http://smart-crop-prediction-demo.onrender.com/predict', formData);
 
     // Flask se aayi prediction ko frontend ko bhejna
     res.json(response.data);

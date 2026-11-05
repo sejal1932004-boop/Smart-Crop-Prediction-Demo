@@ -16,7 +16,7 @@ const Login = () => {
     setError("");
 
     try {
-      const res = await axios.post("http://smart-crop-node-backend.onrender.com/api/login", {
+      const res = await axios.post("https://smart-crop-node-backend.onrender.com/api/login", {
         email,
         password,
       });
