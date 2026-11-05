@@ -11,7 +11,7 @@ const app = express();
 
 // CORS Middleware setup
 const corsOptions = {
-  origin: "http://localhost:3000",  // Set your frontend URL here
+  origin: "http://smart-crop-frontend-3ns9.onrender.com",  // Set your frontend URL here
   methods: ["GET", "POST", "PUT", "DELETE"],  // Allowed methods
   allowedHeaders: ["Content-Type", "Authorization"],  // Allowed headers
 };
